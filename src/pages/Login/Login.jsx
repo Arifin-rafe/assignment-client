@@ -63,7 +63,7 @@ const Login = () => {
         <form onSubmit={handleLogin} action="">
             <div className="flex justify-center mt-16">
                 < div className="relative flex w-96 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md" >
-                    <div className="relative mx-4 -mt-6 mb-4 grid h-28 place-items-center overflow-hidden rounded-xl bg-gradient-to-tr from-green-600 to-green-400 bg-clip-border text-white shadow-lg shadow-green-500/40">
+                    <div className="relative mx-4 -mt-6 mb-4 grid h-28 place-items-center overflow-hidden rounded-xl bg-gradient-to-tr from-pink-600 to-pink-400 bg-clip-border text-white shadow-lg shadow-pink-500/40">
                         <h3 className="block font-sans text-3xl font-semibold leading-snug tracking-normal text-white antialiased">
                             Sign In
                         </h3>
@@ -93,7 +93,7 @@ const Login = () => {
                     <p className="text-sm text-center text-green-500">{success}</p> */}
                     <div className="p-6 pt-0">
                         <button
-                            className="block w-full select-none rounded-lg bg-gradient-to-tr from-green-600 to-green-400 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-green-500/20 transition-all hover:shadow-lg hover:shadow-green-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                            className="block w-full select-none rounded-lg bg-gradient-to-tr from-pink-600 to-pink-400 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                             type="submit"
                             data-ripple-light="true"
                         >
@@ -103,7 +103,7 @@ const Login = () => {
                             Don't have an account?
                             <Link
                                 to='/register'
-                                className="ml-1 block font-sans text-sm font-bold leading-normal text-black  antialiased hover: text-green-500"
+                                className="ml-1 block font-sans text-sm font-bold leading-normal text-black  antialiased hover: text-pink-500"
                             >
                                 Sign Up
                             </Link>

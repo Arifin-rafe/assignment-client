@@ -8,7 +8,7 @@ import {
 import GiveMarks from "../../Modals/GiveMarks";
 const SubmittedCard = ({submit}) => {
 
-    const{title,notes,participantEmail,authorEmail}=submit
+    const{title,notes,participantEmail,authorEmail,name}=submit
     return (
         <Card className="mt-6 w-96">
             <CardBody>
@@ -22,7 +22,7 @@ const SubmittedCard = ({submit}) => {
                    Submitted By:{participantEmail}
                 </Typography>
                 <Typography>
-                   Examinee By:{authorEmail}
+                   Examinee By:{name}
                 </Typography>
             </CardBody>
             <CardFooter className="pt-0">

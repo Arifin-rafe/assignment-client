@@ -15,7 +15,7 @@ const AssignmentDetails = () => {
             <p>Author Name: {name}</p>
             <p>Last Date: {date}</p>
             <p>Details:-{description}</p>
-            <TakeTest className='mt-5' email={email} title={title}></TakeTest>
+            <TakeTest className='mt-5' email={email} title={title} name={name}></TakeTest>
             </div>
         </div>
     );

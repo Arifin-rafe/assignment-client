@@ -12,7 +12,7 @@ import {
 import Swal from "sweetalert2";
 import { AuthContext } from "../Providers/AuthProvider/AuthProvider";
 
-const TakeTest = ({email,title}) => {
+const TakeTest = ({email,title,name}) => {
   const [open, setOpen] = React.useState(false);
   const {user} = useContext(AuthContext)
 
@@ -22,7 +22,7 @@ const TakeTest = ({email,title}) => {
     const form = event.target;
     const link = form.link.value
     const notes = form.notes.value
-    const submitInfo = { link, notes,title,participantEmail:user?.email, authorEmail:email }
+    const submitInfo = { link, notes,title,participantEmail:user?.email, authorEmail:email,name }
     console.log(submitInfo);
 
     

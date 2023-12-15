@@ -8,11 +8,13 @@ import {
     Select,
     Option,
 } from "@material-tailwind/react";
+import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 const UpdateAssignment = () => {
+    const [difficultyLvl, setDifficultyLvl] = useState('')
     const update = useLoaderData()
-    const {name,email,title,description,marks, img,date,_id}= update
+    const {name,email,title,description,marks, img,date,_id,difficulty}= update
     const handleUpdate = event => {
         event.preventDefault()
         const form = event.target;
@@ -23,9 +25,10 @@ const UpdateAssignment = () => {
         const img = form.img.value;
         const date = form.date.value;
         const description = form.description.value;
+        const difficulty = difficultyLvl;
 
-        const updateInfo = { name, email, title, marks, img, date, description }
-        console.log(updateInfo);
+        const updateInfo = { name, email, title, marks, img, date, description,difficulty }
+        // console.log(updateInfo);
 
         fetch(`http://localhost:5000/assignments/${_id}`, {
             method: 'PUT',
@@ -46,6 +49,9 @@ const UpdateAssignment = () => {
                     })
                 }
             })
+    }
+    const handleSelect = e => {       
+        setDifficultyLvl(e)
     }
     return (
         <div className="flex justify-center mx-auto mt-10 shadow-2xl rounded-lg">
@@ -154,7 +160,7 @@ const UpdateAssignment = () => {
                             </div>
                             <div className="flex w-72 flex-col gap-6">
 
-                                <Select color="teal" name="difficulty" label="Select difficulty">
+                                <Select color="teal" defaultValue={difficulty} value={difficultyLvl} onChange={handleSelect} name="difficulty" label="Select difficulty">
                                     <Option value="easy">Easy</Option>
                                     <Option value="medium">Medium</Option>
                                     <Option value="hard">Hard</Option>

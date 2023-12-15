@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Typography } from "@material-tailwind/react";
  
 const LINKS = [
@@ -20,11 +20,11 @@ const currentYear = new Date().getFullYear();
  
 const Footer = () =>  {
   return (
-    <footer className="relative w-full">
+    <footer className="relative w-full mt-28">
       <div className="mx-auto w-full max-w-7xl px-8">
         <div className="grid grid-cols-1 justify-between gap-4 md:grid-cols-2">
           <Typography variant="h5" className="mb-6">
-            Stripe Assignment
+            1st Assignment
           </Typography>
           <div className="grid grid-cols-3 justify-between gap-4">
             {LINKS.map(({ title, items }) => (
