@@ -14,7 +14,7 @@ const Faq = () => {
   const handleOpen = (value) => setOpen(open === value ? 0 : value);
  
   return (
-    <div className="mb-10 mt-10">
+    <div className="mb-10">
       <h3 className='text-3xl font-bold text-center'>FAQ</h3>
       <Accordion open={alwaysOpen}>
         <AccordionHeader onClick={handleAlwaysOpen}>What is This website for?</AccordionHeader>

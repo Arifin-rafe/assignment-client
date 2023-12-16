@@ -16,7 +16,7 @@ const Assignments = () => {
         console.log(e);
     }
     return (
-        <div>
+        <div >
             <div className='w-10 mt-4'>
             <Select onChange={handleFilter} value={difficultyLvl} className='flex justify-start' color="teal" name="difficulty" label="Select difficulty">
                 <Option value="">All</Option>

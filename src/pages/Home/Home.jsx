@@ -7,8 +7,13 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            
-            <Faq></Faq>
+
+            <div className='flex gap-10 mt-10 justify-center'>
+                <img className='w-96' src="../../../public/images/assi-mail.jpg" alt="" />
+                <div className='w-96'>
+                    <Faq></Faq>
+                </div>
+            </div>
             <h3 className='text-3xl font-bold text-center'>Our Features</h3>
             <Features></Features>
         </div>
