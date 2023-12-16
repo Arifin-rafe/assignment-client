@@ -6,7 +6,7 @@ import {
     Button,
     IconButton,
 } from "@material-tailwind/react";
-import { CircleStackIcon, HomeIcon, PlusIcon, Square3Stack3DIcon, SquaresPlusIcon } from "@heroicons/react/24/solid";
+import { CircleStackIcon, HomeIcon,  Square3Stack3DIcon, SquaresPlusIcon } from "@heroicons/react/24/solid";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider/AuthProvider";
 
