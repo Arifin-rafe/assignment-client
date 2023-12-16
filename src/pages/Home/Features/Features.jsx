@@ -1,15 +1,13 @@
-
 import {
     Card,
     CardBody,
-   
     Typography,
     
 } from "@material-tailwind/react";
 
 const Features = () => {
     return (
-        <div className='flex mb-10'>
+        <div className='flex mb-10 gap-5'>
             <Card className="mt-6 w-96">
                 <CardBody>
                     <Typography variant="h5" color="blue-gray" className="mb-2">
