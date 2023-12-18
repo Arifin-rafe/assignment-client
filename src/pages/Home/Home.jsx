@@ -1,4 +1,5 @@
 
+import Achievements from './Achievements/Achievements';
 import Banner from './Banner/Banner';
 import Faq from './Faq/Faq';
 import Features from './Features/Features';
@@ -17,6 +18,7 @@ const Home = () => {
             </div>
             <h3 className='text-3xl font-bold text-center'>Our Features</h3>
             <Features></Features>
+            <Achievements></Achievements>
             
         </div>
     );

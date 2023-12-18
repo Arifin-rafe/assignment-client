@@ -16,7 +16,7 @@ const AssignmentCard = ({ assignment }) => {
     return (
         <Card className="mt-6 ">
             <CardHeader color="blue-gray" className="relative">
-                <img className=""
+                <img className="h-46 w-96"
                     src={img}
                 />
             </CardHeader>
