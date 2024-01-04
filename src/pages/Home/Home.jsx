@@ -23,7 +23,6 @@ const Home = () => {
             <h3 className='text-3xl font-bold text-center'>Our Features</h3>
             <Features></Features>
 
-            
         </div>
     );
 };
