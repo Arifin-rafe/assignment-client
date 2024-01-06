@@ -22,9 +22,6 @@ const Submitted = () => {
         
         <div className="grid grid-cols-3">
             {submitted.map(submit=><SubmittedCard key={submit._id} submit={submit}></SubmittedCard>)}
-            
-
-        
         </div>
     );
 };
