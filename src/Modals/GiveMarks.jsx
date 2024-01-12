@@ -11,10 +11,8 @@ import {
 } from "@material-tailwind/react";
 import React from "react";
 
-const GiveMarks = ({title}) => {
+const GiveMarks = ({title,link,notes}) => {
     const [open, setOpen] = React.useState(false);
-
-
   const handleOpen = () => setOpen(!open);
     return (
         <>
