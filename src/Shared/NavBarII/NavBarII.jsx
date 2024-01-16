@@ -11,7 +11,6 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider/AuthProvider";
 
 export const NavBarII=()=> {
-
     const {user,logOut}= useContext(AuthContext)
     const handleLogout=()=>{
         logOut()
