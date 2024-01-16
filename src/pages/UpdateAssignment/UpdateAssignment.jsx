@@ -26,7 +26,6 @@ const UpdateAssignment = () => {
         const date = form.date.value;
         const description = form.description.value;
         const difficulty = difficultyLvl;
-
         const updateInfo = { name, email, title, marks, img, date, description,difficulty }
         // console.log(updateInfo);
 
