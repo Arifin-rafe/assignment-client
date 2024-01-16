@@ -49,6 +49,12 @@ const GiveMarks = ({title,link,notes}) => {
                             <Typography className="-mb-1" color="blue-gray" variant="h6">
                                 Title: {title}
                             </Typography>
+                            <Typography className="-mb-1" color="blue-gray" variant="h6">
+                                Link: {link}
+                            </Typography>
+                            <Typography className="-mb-1" color="blue-gray" variant="h6">
+                                Notes: {notes}
+                            </Typography>
                             <Input label="Marks" type="text" name="marks" required/>
                             <Textarea label="FeedBack" type="text" name="feedback" />
                         </div>

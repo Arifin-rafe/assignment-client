@@ -6,9 +6,9 @@ import {
     
 } from "@material-tailwind/react";
 import GiveMarks from "../../Modals/GiveMarks";
-const SubmittedCard = ({submit}) => {
 
-    const{title,notes,participantEmail,authorEmail,name}=submit
+const SubmittedCard = ({submit}) => {
+    const{title,notes,participantEmail,authorEmail,name,link}=submit
     return (
         <Card className="mt-6 w-96">
             <CardBody>
@@ -26,7 +26,7 @@ const SubmittedCard = ({submit}) => {
                 </Typography>
             </CardBody>
             <CardFooter className="pt-0">
-                <GiveMarks title={title}></GiveMarks>
+                <GiveMarks title={title} link={link} notes={notes}></GiveMarks>
             </CardFooter>
         </Card>
     );
