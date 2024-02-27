@@ -94,13 +94,15 @@ export const NavBarII=()=> {
                 <div className="hidden lg:block">{navList}</div>
                 
                 <div className="flex items-center gap-x-1 ">
-                        <p className="text-sm ml-6">{user&& user.email}</p>
+                        <p className="text-sm font-semibold ml-6">{user&& user.email}</p>
+                        <p className="hidden lg:block">
                         {user?<Button onClick={handleLogout} fullWidth variant="gradient" size="sm" className="">
                             <span>Log Out</span>
                         </Button>:
                         <Link to='/login'><Button fullWidth variant="text" size="sm" className="">
                         <span>Sign in</span>
                     </Button></Link>}
+                        </p>
                                                
                     </div>
                 

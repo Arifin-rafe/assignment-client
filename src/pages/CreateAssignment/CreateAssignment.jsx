@@ -7,7 +7,7 @@ import {
     Select,
     Option,
 } from "@material-tailwind/react";
-// import { useEffect } from "react";
+
 import { useContext, useState } from "react";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../Providers/AuthProvider/AuthProvider";
@@ -26,7 +26,6 @@ const CreateAssignment = () => {
         const img = form.img.value;
         const date = form.date.value;
         const description = form.description.value;
-        // const difficulty = form.difficulty.value;
         const difficulty = difficultyLvl;
         const assignmentInfo = { name, email, title, marks, img, date, description, difficulty }
         console.log(assignmentInfo);
@@ -51,22 +50,22 @@ const CreateAssignment = () => {
                 }
             })
     }
-    const handleSelect = e => {       
+    const handleSelect = e => {
         setDifficultyLvl(e)
     }
     return (
-        <div className="flex justify-center mx-auto mt-10 shadow-2xl rounded-lg">
+        <div className="flex justify-center shadow-2xl mt-10  rounded-lg">
             <Card color="transparent" shadow={false} >
-                <Typography variant="h4" color="blue-gray">
+                <Typography className="mx-auto " variant="h4" color="blue-gray">
                     Create Assignment
                 </Typography>
-                <Typography color="gray" className="mt-1 font-normal">
+                <Typography color="gray" className="text-center mt-1 mx-auto font-normal">
                     Create your creativity! Enter your details for assignment.
                 </Typography>
-                <form onSubmit={handleCreateAssignSubmit} className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
-                    <div className="mb-1 flex flex-col gap-6">
-                        <div className="flex gap-9 items-center">
-                            <Typography variant="h6" color="blue-gray" className="-mb-3">
+                <form onSubmit={handleCreateAssignSubmit} className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-auto">
+                    <div className="mb-1 flex flex-col gap-6 ">
+                        <div className=" mx-auto md:flex gap-9 items-center">
+                            <Typography variant="h6" color="blue-gray" className="md:-mb-3">
                                 Name
                             </Typography>
                             <Input
@@ -77,8 +76,9 @@ const CreateAssignment = () => {
                                 labelProps={{
                                     className: "before:content-none after:content-none",
                                 }}
+                                
                                 required />
-                            <Typography variant="h6" color="blue-gray" className="-mb-3">
+                            <Typography variant="h6" color="blue-gray" className="md:-mb-3">
                                 Email
                             </Typography>
                             <Input
@@ -94,22 +94,21 @@ const CreateAssignment = () => {
                                 required
                             />
                         </div>
-                        <div className="flex gap-9 items-center">
-                            <Typography variant="h6" color="blue-gray" className="-mb-3">
+                        <div className="mx-auto md:flex gap-9 items-center">
+                            <Typography variant="h6" color="blue-gray" className="md:-mb-3">
                                 Title
                             </Typography>
                             <Input
                                 size="lg"
-
                                 type="text"
                                 name="title"
                                 placeholder="Assignment title"
-                                className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
+                                className="md:mx-3 !border-t-blue-gray-200 focus:!border-t-gray-900"
                                 labelProps={{
                                     className: "before:content-none after:content-none",
                                 }}
                             />
-                            <Typography variant="h6" color="blue-gray" className="-mb-3">
+                            <Typography variant="h6" color="blue-gray" className="md:-mb-3">
                                 Marks
                             </Typography>
                             <Input
@@ -123,8 +122,8 @@ const CreateAssignment = () => {
                                 }}
                             />
                         </div>
-                        <div className="flex gap-9">
-                            <Typography variant="h6" color="blue-gray" className="-mb-3">
+                        <div className="mx-auto md:flex gap-9 items-center">
+                            <Typography variant="h6" color="blue-gray" className="md:-mb-3">
                                 Image
                             </Typography>
                             <Input
@@ -136,7 +135,7 @@ const CreateAssignment = () => {
                                     className: "before:content-none after:content-none",
                                 }}
                             />
-                            <Typography variant="h6" color="blue-gray" className="-mb-3">
+                            <Typography variant="h6" color="blue-gray" className="md:-mb-3">
                                 Date
                             </Typography>
                             <Input
@@ -150,8 +149,8 @@ const CreateAssignment = () => {
                                 }}
                             />
                         </div>
-                        <div className="flex gap-9">
-                            <div className="flex w-96 flex-col gap-6">
+                        <div className="mx-auto md:flex gap-9">
+                            <div className="flex w-auto flex-col gap-6">
 
                                 <Textarea variant="outlined" name="description" label="Description" />
                             </div>
@@ -161,15 +160,10 @@ const CreateAssignment = () => {
                                     <Option value="easy">Easy</Option>
                                     <Option value="medium">Medium</Option>
                                     <Option value="hard">Hard</Option>
-
                                 </Select>
                             </div>
                         </div>
-
-
                     </div>
-                    
-
                     <Button type="submit" className="mt-6 items-center" fullWidth>
                         submit
                     </Button>

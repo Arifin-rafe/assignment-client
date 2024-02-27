@@ -1,4 +1,3 @@
-// import React from 'react';
 
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider/AuthProvider";
@@ -20,7 +19,7 @@ const Submitted = () => {
     },[url,user?.email])
     return (
         
-        <div className="grid grid-cols-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {submitted.map(submit=><SubmittedCard key={submit._id} submit={submit}></SubmittedCard>)}
         </div>
     );

@@ -13,13 +13,7 @@ const Home = () => {
             <Subjects></Subjects>
             <Achievements></Achievements>
             <Partners></Partners>
-            <div className='flex gap-10 mt-10 justify-center'>
-                <img className='w-96' src="../../../public/images/assi-mail.jpg" alt="" />
-                <div className='w-96'>
-                    <Faq></Faq>
-                </div>
-            </div>
-            
+            <Faq></Faq>
             <h3 className='text-3xl font-bold text-center'>Our Features</h3>
             <Features></Features>
 

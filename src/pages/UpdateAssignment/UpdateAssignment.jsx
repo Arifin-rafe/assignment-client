@@ -14,7 +14,7 @@ import Swal from "sweetalert2";
 const UpdateAssignment = () => {
     const [difficultyLvl, setDifficultyLvl] = useState('')
     const update = useLoaderData()
-    const {name,email,title,description,marks, img,date,_id,difficulty}= update
+    const { name, email, title, description, marks, img, date, _id, difficulty } = update
     const handleUpdate = event => {
         event.preventDefault()
         const form = event.target;
@@ -26,8 +26,7 @@ const UpdateAssignment = () => {
         const date = form.date.value;
         const description = form.description.value;
         const difficulty = difficultyLvl;
-        const updateInfo = { name, email, title, marks, img, date, description,difficulty }
-        // console.log(updateInfo);
+        const updateInfo = { name, email, title, marks, img, date, description, difficulty }
 
         fetch(`http://localhost:5000/assignments/${_id}`, {
             method: 'PUT',
@@ -49,22 +48,22 @@ const UpdateAssignment = () => {
                 }
             })
     }
-    const handleSelect = e => {       
+    const handleSelect = e => {
         setDifficultyLvl(e)
     }
     return (
         <div className="flex justify-center mx-auto mt-10 shadow-2xl rounded-lg">
             <Card color="transparent" shadow={false} >
-                <Typography variant="h4" color="blue-gray">
+                <Typography variant="h4" color="blue-gray" className="mx-auto">
                     Update Assignment
                 </Typography>
-                <Typography color="gray" className="mt-1 font-normal">
+                <Typography color="gray" className="text-center mt-1 mx-auto font-normal">
                     Update your creativity! Enter your details for assignment.
                 </Typography>
-                <form onSubmit={handleUpdate} className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
+                <form onSubmit={handleUpdate} className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-auto">
                     <div className="mb-1 flex flex-col gap-6">
-                        <div className="flex gap-9 items-center">
-                            <Typography variant="h6" color="blue-gray" className="-mb-3">
+                        <div className="mx-auto md:flex gap-9 items-center">
+                            <Typography variant="h6" color="blue-gray" className="md:-mb-3 -mt-2">
                                 Name
                             </Typography>
                             <Input
@@ -77,7 +76,7 @@ const UpdateAssignment = () => {
                                     className: "before:content-none after:content-none",
                                 }}
                                 required />
-                            <Typography variant="h6" color="blue-gray" className="-mb-3">
+                            <Typography variant="h6" color="blue-gray" className="">
                                 Email
                             </Typography>
                             <Input
@@ -85,7 +84,7 @@ const UpdateAssignment = () => {
                                 name="email"
                                 defaultValue={email}
                                 type="email"
-                                // defaultValue={user?.email}
+                                
                                 placeholder="name@mail.com"
                                 className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
                                 labelProps={{
@@ -94,8 +93,8 @@ const UpdateAssignment = () => {
                                 required
                             />
                         </div>
-                        <div className="flex gap-9 items-center">
-                            <Typography variant="h6" color="blue-gray" className="-mb-3">
+                        <div className="mx-auto md:flex gap-9 items-center">
+                            <Typography variant="h6" color="blue-gray" className="md:mr-3">
                                 Title
                             </Typography>
                             <Input
@@ -104,12 +103,12 @@ const UpdateAssignment = () => {
                                 type="text"
                                 name="title"
                                 placeholder="Assignment title"
-                                className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
+                                className="mb-3 !border-t-blue-gray-200 focus:!border-t-gray-900"
                                 labelProps={{
                                     className: "before:content-none after:content-none",
                                 }}
                             />
-                            <Typography variant="h6" color="blue-gray" className="-mb-3">
+                            <Typography variant="h6" color="blue-gray" className="">
                                 Marks
                             </Typography>
                             <Input
@@ -123,8 +122,8 @@ const UpdateAssignment = () => {
                                 }}
                             />
                         </div>
-                        <div className="flex gap-9">
-                            <Typography variant="h6" color="blue-gray" className="-mb-3">
+                        <div className="mx-auto md:flex gap-9">
+                            <Typography variant="h6" color="blue-gray" className="md:mt-2">
                                 Image
                             </Typography>
                             <Input
@@ -137,7 +136,7 @@ const UpdateAssignment = () => {
                                     className: "before:content-none after:content-none",
                                 }}
                             />
-                            <Typography variant="h6" color="blue-gray" className="-mb-3">
+                            <Typography variant="h6" color="blue-gray" className="md:-mb-3 mt-2">
                                 Date
                             </Typography>
                             <Input
@@ -152,8 +151,8 @@ const UpdateAssignment = () => {
                                 }}
                             />
                         </div>
-                        <div className="flex gap-9">
-                            <div className="flex w-96 flex-col gap-6">
+                        <div className="mx-auto md:flex gap-9">
+                            <div className="flex w-auto flex-col gap-6">
 
                                 <Textarea variant="outlined" name="description" defaultValue={description} label="Description" />
                             </div>
@@ -167,11 +166,7 @@ const UpdateAssignment = () => {
                                 </Select>
                             </div>
                         </div>
-
-
                     </div>
-                    {/* <input type="submit" value="submit" className="btn btn-primary" /> */}
-
                     <Button type="submit" className="mt-6 items-center" fullWidth>
                         update
                     </Button>

@@ -5,8 +5,7 @@ import { NavBarII } from "../../Shared/NavBarII/NavBarII.JSX";
 
 const MainLayout = () => {
     return (
-        <div>
-            
+        <div>         
             <NavBarII></NavBarII>
             <Outlet></Outlet>
             <Footer></Footer>

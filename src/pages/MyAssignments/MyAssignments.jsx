@@ -21,8 +21,7 @@ const MyAssignments = () => {
         }
     }, [url, user?.email])
 
-    const handleDelete = id => {
-        
+    const handleDelete = id => {  
         Swal.fire({
             title: "Are you sure?",
             text: "You won't be able to revert this!",
@@ -51,8 +50,6 @@ const MyAssignments = () => {
                             setMyAssignments(remaining)
                         }
                     })
-
-
             }
         });
 

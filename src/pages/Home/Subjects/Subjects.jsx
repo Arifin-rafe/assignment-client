@@ -1,12 +1,12 @@
-import { BriefcaseIcon, CalculatorIcon, CogIcon, GlobeAsiaAustraliaIcon, RssIcon } from "@heroicons/react/24/solid";
+import { CalculatorIcon, CogIcon, GlobeAsiaAustraliaIcon, RssIcon } from "@heroicons/react/24/solid";
 
 const Subjects = () => {
     return (
-        <div className='mt-5 my-5 items-center justify-center'>
+        <div className='mt-5'>
             <div className='text-3xl font-serif font-bold text-center my-5 text-black'>
                 <h2 className='font-serif text-3xl'>Subjects we cover</h2>
             </div>
-            <div className='flex gap-5'>
+            <div className='flex flex-cols-1 md:flex-cols-4 gap-5 justify-center'>
                 <div className="group relative">
                     <img className='w-64 h-52 rounded-lg hover:opacity-50 ' src="../../../../public/images/laptop.jpg" alt="" />
 

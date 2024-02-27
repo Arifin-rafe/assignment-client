@@ -7,8 +7,8 @@ import {
 
 const Features = () => {
     return (
-        <div className='flex mb-10 gap-5'>
-            <Card className="mt-6 w-96">
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mb-10 gap-5'>
+            <Card className="mt-6 w-auto">
                 <CardBody>
                     <Typography variant="h5" color="blue-gray" className="mb-2">
                         User Authentication and Role-Based Access
@@ -20,7 +20,7 @@ const Features = () => {
                 </CardBody>
                 
             </Card>
-            <Card className="mt-6 w-96">
+            <Card className="mt-6 w-auto">
                 <CardBody>
                     <Typography variant="h5" color="blue-gray" className="mb-2">
                         File Upload and Submission System
@@ -33,7 +33,7 @@ const Features = () => {
                 </CardBody>
                 
             </Card>
-            <Card className="mt-6 w-96">
+            <Card className="mt-6 w-auto">
                 <CardBody>
                     <Typography variant="h5" color="blue-gray" className="mb-2">
                         Grading and Feedback Mechanism

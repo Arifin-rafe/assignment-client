@@ -6,7 +6,7 @@ const Assignments = () => {
     const [assignments, setAssignments] = useState([])
     const [difficultyLvl, setDifficultyLvl] = useState("")
     useEffect(() => {
-        fetch(`http://localhost:5000/filter?difficulty=${difficultyLvl}`)
+        fetch(`http://localhost:5000/assignments?difficulty=${difficultyLvl}`)
             .then(res => res.json())
             .then(data => setAssignments(data))
     }, [difficultyLvl])
@@ -25,7 +25,7 @@ const Assignments = () => {
                 </Select>
             </div>
 
-            <div className='grid grid-cols-4 mt-10 gap-5'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-10 gap-5'>
                 {assignments.map(assignment => <AssignmentCard key={assignment._id} assignment={assignment}></AssignmentCard>)}
             </div>
         </div>
